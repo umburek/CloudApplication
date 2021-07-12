@@ -1,0 +1,28 @@
+<ul>
+  <li><%= link_to 'New quote!', new_quote_url %></li>
+  <li><%= link_to 'New clouds!', new_cloud_path %></li>
+</ul>
+
+<%= form_with model: @vote_form_left, url: vote_path do |f| %>
+  <h2><%= @vote_form_left.preferred_vote_label %></h2>
+  <%= f.hidden_field :preferred_quote_id %>
+  <%= f.hidden_field :other_quote_id %>
+  <%= f.submit "This one!" %>
+<% end %>
+
+<%= form_with model: @vote_form_right, url: vote_path do |f| %>
+  <h2><%= @vote_form_right.preferred_vote_label %></h2>
+  <%= f.hidden_field :preferred_quote_id %>
+  <%= f.hidden_field :other_quote_id %>
+  <%= f.submit "This one!" %>
+<% end %>
+
+<h2>Counter: <%= @visits %></h2>
+<h2>Top10 Quotes: </h2>
+<ul>
+  <% @quotes.each do |quote| %>
+    <li>
+        <%= quote.label %>, score: <%= quote.score %>
+    </li>
+  <% end %>
+</ul>
