@@ -23,9 +23,16 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'rails-patterns'
 gem 'magic_cloud'
+gem 'sidekiq'
+gem 'sidekiq-cron'
+gem 'redis-namespace'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+#
+gem 'minitest', '~> 5.14', '>= 5.14.4'
+gem 'racc', '~> 1.5', '>= 1.5.2'
+gem 'rake', '~> 13.0', '>= 13.0.6'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
