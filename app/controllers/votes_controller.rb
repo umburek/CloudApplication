@@ -1,5 +1,7 @@
 class VotesController < ApplicationController
+  before_action :authenticate_user!
   before_action :count_visits, only: :create
+
   def new
     return redirect_to root_path if Quote.count < 2
 

@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'Cloud <umbur1982@gmai;.com>'
+  default from: 'Cloud <admin@example.com>'
   layout 'mailer'
 end

@@ -26,6 +26,9 @@ gem 'magic_cloud'
 gem 'sidekiq'
 gem 'sidekiq-cron'
 gem 'redis-namespace'
+gem 'mailcatcher'
+gem 'rmagick', require: false
+gem 'devise'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
