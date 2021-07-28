@@ -1,6 +1,6 @@
 require "test_helper"
 
-class CatfactMailerTest < ActionMailer::TestCase
+class UserMailerJobTest < ActiveJob::TestCase
   # test "the truth" do
   #   assert true
   # end

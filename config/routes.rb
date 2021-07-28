@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   mount Sidekiq::Web => '/sidekiq'
 
-  resources :quotes, only: [:new, :create]
+  resources :quotes, only: [:new, :create, :destroy]
   resource :vote, only: [:new, :create]
   resources :clouds, only: [:new]
 

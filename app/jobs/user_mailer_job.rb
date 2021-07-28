@@ -1,4 +1,4 @@
-class CatfactMailerJob < ApplicationJob
+class UserMailerJob < ApplicationJob
   queue_as :default
 
   def perform(*args)
@@ -17,12 +17,12 @@ class CatfactMailerJob < ApplicationJob
         img = cloud.draw(960, 600)
         img.write('app/assets/images/cloud.png')
         if File.exists?('app/assets/images/cloud.png')
-          CatfactMailer.daily_catfact.deliver_now
+          UserMailer.daily_cloud_image.deliver_now
         end
       end
-
-      # CatfactMailer.with(user: user).daily_catfact.deliver_now
-
     end
   end
+
+  # CatfactMailer.with(user: user).daily_catfact.deliver_now
+
 end
