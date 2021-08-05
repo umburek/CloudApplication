@@ -2,7 +2,8 @@ class CloudsController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    words_with_rotates = Quote.
+    words_with_rotates = current_user.
+      quotes.
       order(:score).
       limit(10).
       pluck(:label).
@@ -14,7 +15,7 @@ class CloudsController < ApplicationController
     img = cloud.draw(800, 600) #default height/width
     img.write(Rails.root.join('app/assets/images/cloud.png'))
 
-    @quotes = Quote.order(:score).limit(10)
+    @quotes = current_user.quotes.order(:score).limit(10)
 
   end
 end

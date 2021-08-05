@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :quotes, only: [:new, :create, :destroy]
   resource :vote, only: [:new, :create]
   resources :clouds, only: [:new]
+  resource :send_cloud_image_mail, controller: 'send_cloud_image_mail', only: :create
 
   root to: 'quotes#new'
 end

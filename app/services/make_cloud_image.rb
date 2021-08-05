@@ -1,0 +1,1 @@
+class MakeCloudImage < Patterns::Service

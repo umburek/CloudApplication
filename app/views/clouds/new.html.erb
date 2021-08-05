@@ -2,7 +2,7 @@
 <ul>
   <li><%= link_to 'New quote!', new_quote_url %></li>
   <li><%= link_to 'Vote now!', new_vote_path %></li>
-  <li><%= link_to 'Send email', @email %></li>
+  <li><%= link_to 'Send email', send_cloud_image_mail_path, method: :post %></li>
 </ul>
 
 <%= image_tag "cloud.png" %>
